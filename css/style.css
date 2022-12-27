@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gilda+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    color: #3f52a0;
+    box-sizing: border-box;
+}
+
+/* 공통 섹션 */
+.section {
+    width: 100%;
+    height: 100vh;
+}
+
+/* 메뉴 */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    font-family: 'Abril Fatface', cursive;
+}
+
+/* 로고 */
+.logo h1 {
+    border: 1px solid #3f52a0;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+/* 메뉴 아이콘 */
+.navbar_icon {
+    color: #3f52a0;
+    font-size: 4rem;
+}
+
+.navbar_icon li:nth-child(2) {
+    display: none;
+}
+
+/* 메뉴 리스트 */
+.navbar_menu {
+    display: none;
+}
+
+.navbar_menu li {
+    display: none;
+}
+
+/* 메인 컨텐츠 */
+.main_vis {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+}
+
+.main_vis .article_text h1 {
+    font-weight: 900;
+    font-size: 15rem;
+}
+
+.main_vis .article_text h1:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    top: 6rem;
+    left: 1rem;
+    letter-spacing: -0.1rem;
+    line-height: 8rem;
+    text-align: left;
+    color: #fff;
+    letter-spacing: -0.5rem;
+    -webkit-text-stroke: 1px #3f52a0;
+}
+
+.main_vis .article_text h1:nth-child(2) {
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    line-height: 8rem;
+    color: #3f52a0;
+    letter-spacing: -0.6rem;
+}
+
+/* about 페이지 */
+.art_one {
+    position: relative;
+    width: 100vw;
+    background-color: #113971;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 파도 효과 */
+.art_one .wave {
+    background-image: url(../img/wave.svg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: -4rem;
+    animation: wave 5.5s linear 0s infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+/* 파도 애니메이션 */
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+/* about left */
+.art_one_content {
+    position: absolute;
+    width: 100vw;
+    top: 10rem;
+    text-align: center;
+}
+
+.art_one_content h2 {
+    -webkit-text-stroke: 1px #fff;
+    font-size: 12rem;
+    color: #113971;
+    font-weight: 900;
+}
+
+.art_one_content p {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 100;
+    line-height: 2rem;
+    letter-spacing: -0.1rem;
+}
+
+.art_one_img {
+    width: 100%;
+    margin: 4rem 0;
+}
+
+.art_one_img img {
+    width: 18%;
+    filter: grayscale(0);
+    transform: rotate(-9deg);
+    transition: .9s;
+    border-radius: 0 20% 0 20%;
+    /* animation: motion 0.9s linear 0s infinite alternate; */
+    animation: motion2 3s ease-in-out infinite;
+    margin-top: 0;
+    /* animation-iteration-count: 1; */
+    z-index: 5;
+}
+
+/* 둥둥 효과 */
+@keyframes motion {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 14px;
+    }
+}
+
+@keyframes motion2 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(6deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-6deg);
+    }
+}
+
+
+/* 프로젝트 1 */
+.art_two {
+    background-color: #113971;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+}
+
+.art_two_top {
+    margin: auto;
+    text-align: center;
+}
+
+.art_two_top h3 {
+    font-size: 5rem;
+    /* -webkit-text-stroke: 1px #fff; */
+    color: #fff;
+    font-weight: 900;
+}
+
+.art_two_top h5 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.art_two_top span {
+    color: #fff;
+    font-weight: 100;
+}
+
+.art_two_bottom {
+    text-align: center;
+    color: #fff;
+}
+
+.art_two_bottom img {
+    width: 60%;
+}
+
+
+/* 푸터 */
+.footer {
+    background: #FFDDA7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_left {
+    background: #000;
+}
