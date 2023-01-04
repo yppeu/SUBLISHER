@@ -86,6 +86,26 @@
     letter-spacing: -0.6rem;
 }
 
+.main_vis .article_text h1:nth-child(2) svg {
+    animation: move 2s ease-in-out infinite;
+    /* animation-iteration-count: 3; */
+}
+
+/* svg 움직이기 */
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* about 페이지 */
 .art_one {
     position: relative;
@@ -125,15 +145,19 @@
 .art_one_content {
     position: absolute;
     width: 100vw;
-    top: 10rem;
+    top: 7rem;
     text-align: center;
 }
 
 .art_one_content h2 {
     -webkit-text-stroke: 1px #fff;
-    font-size: 12rem;
+    font-size: 11rem;
     color: #113971;
     font-weight: 900;
+}
+
+.art_one_content span {
+    color: #fff;
 }
 
 .art_one_content p {
@@ -146,11 +170,11 @@
 
 .art_one_img {
     width: 100%;
-    margin: 4rem 0;
+    margin-top: 3rem;
 }
 
 .art_one_img img {
-    width: 18%;
+    width: 15%;
     filter: grayscale(0);
     transform: rotate(-9deg);
     transition: .9s;
@@ -158,10 +182,9 @@
     border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
     /* animation: motion 0.9s linear 0s infinite alternate; */
     animation: motion2 3s ease-in-out infinite;
-    margin-top: 0;
     /* animation-iteration-count: 1; */
     z-index: 5;
-    margin-right: 1.3rem;
+    margin-right: 2rem;
 }
 
 /* 둥둥 효과(세로) */
@@ -191,53 +214,182 @@
 
 /* 프로젝트 1 */
 .art_two {
-    background-color: #113971;
-    display: flex;
-    flex-direction: column;
+    background-color: #FFDDA7;
     position: relative;
-    z-index: -1;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.art_two h3 {
+    font-size: 5.5rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 6rem 0 0 0;
+    letter-spacing: -0.1rem;
+}
+
+.art_two span {
+    font-weight: 900;
+    -webkit-text-stroke: 1px #3f52a0;
+    color: #FFDDA7;
+}
+
+.art_two_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 6.5rem;
 }
 
 .art_two_top {
-    margin: auto;
-    text-align: center;
+    width: 40%;
 }
 
-.art_two_top h3 {
-    font-size: 5rem;
-    /* -webkit-text-stroke: 1px #fff; */
-    color: #fff;
+.art_two_top .left1 {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.art_two_top .left1 ul {
+    margin: 2rem 0 0 8rem;
+}
+
+.art_two_top .left1 ul li {
+    margin-bottom: 0.6rem;
+}
+
+.art_two_top .left2 {
+    margin: 2rem 0 0 8rem;
+}
+
+.art_two_top .left2 h5 {
+    font-size: 1.6rem;
     font-weight: 900;
 }
 
-.art_two_top h5 {
-    font-size: 3rem;
-    color: #fff;
+.art_two_top .left2 p {
+    font-size: 0.8rem;
+    width: 80%;
+    margin: 0.6rem 0;
 }
 
-.art_two_top span {
-    color: #fff;
-    font-weight: 100;
+.art_two_top .left2 .site {
+    width: 24%;
+    display: block;
+    border: 1px dotted #113971;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1.6rem;
 }
 
 .art_two_bottom {
-    text-align: center;
-    color: #fff;
-}
-
-.art_two_bottom img {
     width: 60%;
 }
 
-/* 프로젝트2 */
-.art_three {
-    background: #113971;
+.art_two_bottom img {
+    width: 80%;
+    border-radius: 1rem;
 }
+
+
+
+/* 프로젝트 2 */
+.art_three {
+    background-color: #113971;
+    position: relative;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.art_three h3 {
+    font-size: 5.5rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 6rem 0 0 0;
+    letter-spacing: -0.1rem;
+    color: #FFDDA7;
+}
+
+.art_three span {
+    font-weight: 900;
+    -webkit-text-stroke: 1px #FFDDA7;
+    color: #FFDDA7;
+}
+
+.art_three_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 6.5rem;
+}
+
+.art_three_top {
+    width: 40%;
+}
+
+.art_three_top .left1 {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.art_three_top .left1 ul {
+    margin: 2rem 0 0 8rem;
+}
+
+.art_three_top .left1 ul li {
+    margin-bottom: 0.6rem;
+    color: #FFDDA7;
+}
+
+.art_three_top .left1 ul li b {
+    color: #FFDDA7;
+}
+
+.art_three_top .left2 {
+    margin: 2rem 0 0 8rem;
+}
+
+.art_three_top .left2 h5 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #FFDDA7;
+}
+
+.art_three_top .left2 p {
+    font-size: 0.8rem;
+    width: 80%;
+    margin: 0.6rem 0;
+    color: #FFDDA7;
+}
+
+.art_three_top .left2 .site {
+    width: 24%;
+    display: block;
+    border: 1px dotted #FFDDA7;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1.6rem;
+    color: #FFDDA7;
+}
+
+.art_three_bottom {
+    width: 60%;
+}
+
+.art_three_bottom img {
+    width: 80%;
+    border-radius: 1rem;
+}
+
+
+
 
 /* 프로젝트3 */
 .art_four {
-    background: #ccc;
+    background: #FFDDA7;
 }
+
+
 
 
 /* 푸터 */
