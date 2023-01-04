@@ -440,6 +440,7 @@
     position: relative;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
+    color: #00283D;
 }
 
 .art_four h3 {
@@ -448,7 +449,6 @@
     text-align: center;
     padding: 6rem 0 0 0;
     letter-spacing: -0.1rem;
-    color: #00283D;
 }
 
 .section_list {
@@ -460,6 +460,34 @@
     width: 100%;
     text-align: center;
     margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section_list article img {
+    width: 33%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.section_list article:nth-child(1) {
+    margin-top: 7rem;
+}
+
+.section_list article:nth-child(1)>span:nth-child(2) {
+    margin-top: 2rem;
+}
+
+.section_list article span:nth-child(2) {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.section_list article span:nth-child(3) {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 1rem;
 }
 
 .art_four .bar {
@@ -475,7 +503,6 @@
     display: flex;
     justify-content: space-between;
     border-top: 2px solid;
-    border-bottom: 2px solid;
     color: #00283D;
 }
 
