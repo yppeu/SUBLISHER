@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 16px;
+}
+
 /* 공통 섹션 */
 .section {
     width: 100%;
@@ -452,6 +456,11 @@
     padding: 0.8rem;
     margin: 1rem 0;
     border-radius: 50%;
+    font-weight: 500;
+}
+
+.art_three_bottom .right2 .site:hover {
+    animation: random-bg .5s linear infinite;
 }
 
 /* study + work */
@@ -645,21 +654,10 @@
     width: 100%;
     background-color: #FFD639;
     color: #00283D;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: center;
+    font-weight: 700;
 }
-
-/* .ft_send button::after {
-    content: '';
-    background-image: url(../img/call.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    top: 25rem;
-    left: 73rem;
-} */
 
 .footer img {
     position: absolute;
