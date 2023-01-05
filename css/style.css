@@ -343,6 +343,22 @@
     border-radius: 50%;
 }
 
+.art_two_top .left2 .site:hover {
+    animation: random-bg .5s linear infinite;
+}
+
+@keyframes random-bg {
+    from {
+        filter: hue-rotate(0);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
 .art_two_bottom {
     width: 55%;
 }
@@ -577,6 +593,16 @@
     font-weight: 900;
     letter-spacing: -0.2rem;
     color: #FFD639;
+}
+
+.footer_tp p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+    opacity: 50%;
 }
 
 .footer_bm {
