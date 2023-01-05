@@ -15,31 +15,42 @@
     <!-- 외부 아이콘 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
+    <!-- 제이쿼리 CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
     <!-- 외부 js -->
     <script src="./js/index.js"></script>
+    <script src="./js/nav.js"></script>
 
     <!-- AOS 라이브러리 불러오기-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>sublisher</title>
+
+
 </head>
 
 <body>
     <!-- 네비 시작 -->
     <header>
         <nav class="nav">
+            <!-- 로고 -->
             <div class="logo">
                 <h1>SUBLISHER</h1>
             </div>
-            <!-- 햄버거 메뉴 아이콘 -->
-            <ul class="navbar_icon">
-                <li><i class="xi-caret-down-circle"></i></li>
-                <li><i class="xi-close"></i></li>
-            </ul>
+            <!-- 메뉴 아이콘 -->
+            <div class="navbar_icon">
+                <div class="navbar_block"><i class="xi-caret-down-circle"></i></div>
+                <div class="navbar_none"><i class="xi-close"></i></div>
+            </div>
+            <!-- 메뉴 -->
             <ul class="navbar_menu">
-                <li><a href="/ABOUT">ABOUT</a></li>
-                <li><a href="/PORTFOILO">PORTFOILO</a></li>
-                <li><a href="/CONTACT">CONTACT</a></li>
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#PROJECT01">PROJECT01</a></li>
+                <li><a href="#PROJECT02">PROJECT02</a></li>
+                <li><a href="#STUDY">STUDY&WORK</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -61,7 +72,7 @@
                 </div>
             </section>
             <!-- about 페이지 -->
-            <section class="section art_one">
+            <section class="section art_one" id="ABOUT">
                 <!-- <p>I think web Publisher is make imagination a reality</p> -->
                 <div class="wave"></div>
                 <div class="art_one_content" data-aos="fade-down">
@@ -86,7 +97,7 @@
                 </div>
             </section>
             <!-- 프로젝트1 페이지 -->
-            <section class="section art_two">
+            <section class="section art_two" id="PROJECT01">
                 <h3 data-aos="fade-down">PROJECT <span>01</span> DAILYLOG</h3>
                 <div class="art_two_content">
                     <div class="art_two_top" data-aos="fade-down-right">
@@ -114,7 +125,7 @@
                 </div>
             </section>
             <!-- 프로젝트2 페이지 -->
-            <section class="section art_three">
+            <section class="section art_three" id="PROJECT02">
                 <h3 data-aos="fade-down">PROJECT <span>02</span> DAILYLOG</h3>
                 <div class="art_three_content">
                     <div class="art_three_top" data-aos="fade-left">
@@ -140,7 +151,7 @@
                 </div>
             </section>
             <!-- 프로젝트3 페이지 -->
-            <section class="section art_four">
+            <section class="section art_four" id="STUDY">
                 <h3 data-aos="fade-down">STUDY + WORK</h3>
                 <div class="section_list" data-aos="fade-up">
                     <article>
@@ -177,7 +188,7 @@
                 </div>
             </section>
             <!-- 푸터 -->
-            <footer class="section footer">
+            <footer class="section footer" id="CONTACT">
                 <div class="footer_tp" data-aos="fade-up">
                     <h2>Contact me</h2>
                     <p>THANK YOU!<br>본 사이트는 상업적 목적이 없는 개인 포트폴리오 사이트 입니다 구글 크롬 브라우저에 최적화 되었습니다</p>

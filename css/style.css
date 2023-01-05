@@ -22,6 +22,7 @@ body {
     justify-content: space-between;
     padding: 2rem 5rem;
     font-family: 'Abril Fatface', cursive;
+    cursor: pointer;
 }
 
 /* 로고 */
@@ -41,7 +42,7 @@ body {
     font-size: 4rem;
 }
 
-.navbar_icon li:nth-child(2) {
+.navbar_none {
     display: none;
 }
 
@@ -50,10 +51,48 @@ body {
     display: none;
 }
 
-.navbar_menu li {
+.navbar_menu::after {}
+
+
+.navbar_menu.active {
+    display: block;
+    position: fixed;
+    font-size: 5rem;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    text-align: right;
+    background: #fff;
+    color: #00283D;
+    padding: 3rem;
+    transition: 1s ease;
+    z-index: 99;
+}
+
+.navbar_none.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 3rem;
+}
+
+/* 토글 메뉴 */
+.navbar_block {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 3rem;
+    z-index: 101;
+}
+
+.navbar_block.active {
     display: none;
 }
 
+/* 메인 시작 */
 .main_wrap {
     overflow: hidden;
 }
@@ -63,7 +102,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     position: relative;
-    z-index: 99;
+    z-index: 98;
     width: 100%;
 }
 
@@ -583,7 +622,7 @@ body {
 
 /* 푸터 */
 .footer {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Abril Fatface', cursive;
     position: relative;
     width: 100%;
     background: #00283D;
@@ -600,7 +639,7 @@ body {
     font-size: 5rem;
     line-height: 6rem;
     font-weight: 900;
-    letter-spacing: -0.2rem;
+    letter-spacing: 0.1rem;
     color: #FFD639;
 }
 
@@ -609,9 +648,10 @@ body {
     color: #fff;
     line-height: 1.5rem;
     margin-top: 2rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: -0.1rem;
     font-weight: 100;
     opacity: 50%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer_bm {
