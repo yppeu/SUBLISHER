@@ -38,7 +38,7 @@ body {
 
 /* 메뉴 아이콘 */
 .navbar_icon {
-    color: #00283D;
+    color: #ff3d43;
     font-size: 4rem;
 }
 
@@ -51,9 +51,6 @@ body {
     display: none;
 }
 
-.navbar_menu::after {}
-
-
 .navbar_menu.active {
     display: block;
     position: fixed;
@@ -65,9 +62,14 @@ body {
     text-align: right;
     background: #fff;
     color: #00283D;
-    padding: 3rem;
+    padding: 8rem 10rem;
     transition: 1s ease;
     z-index: 99;
+}
+
+.navbar_menu li:hover {
+    color: #ff3d43;
+    transition: 1s ease;
 }
 
 .navbar_none.active {
@@ -198,18 +200,32 @@ body {
     width: 100%;
     height: 100px;
     top: -4rem;
-    /* animation: wave 5.5s linear 0s infinite; */
+    animation: wave 1s linear 0s infinite;
     transform: translate3d(0, 0, 0);
 }
 
 /* 파도 애니메이션 */
 @keyframes wave {
-    0% {
+
+    0%,
+    100% {
         margin-left: 0;
     }
 
+    50% {
+        margin-left: -15px;
+    }
+}
+
+@keyframes wave2 {
+
+    0%,
     100% {
-        margin-left: -1600px;
+        margin-left: 0;
+    }
+
+    50% {
+        margin-left: 1600px;
     }
 }
 
@@ -247,12 +263,12 @@ body {
 }
 
 .art_one_img img {
-    width: 15%;
+    width: 17%;
     filter: grayscale(0);
     transform: rotate(-9deg);
     transition: .9s;
-    /* border-radius: 0 20% 0 20%; */
-    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+    border-radius: 50%;
+    /* border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%; */
     /* animation: motion 0.9s linear 0s infinite alternate; */
     animation: blur 3s ease-in-out infinite;
     /* animation-iteration-count: 1; */
@@ -262,16 +278,14 @@ body {
 
 /* 둥둥 효과(세로) */
 @keyframes motion {
-    0% {
+
+    0%,
+    100% {
         margin-top: 0px;
     }
 
     50% {
         margin-top: 14px;
-    }
-
-    100% {
-        margin-top: 0px;
     }
 }
 
@@ -292,8 +306,8 @@ body {
 @keyframes blur {
     0% {
         box-shadow:
-            0 0 0 10px rgba(0, 0, 129, 0.1),
-            0 0 0 30px rgb(0, 0, 129, 0.1);
+            0 0 0 30px rgba(0, 0, 129, 0.2),
+            0 0 0 60px rgb(0, 0, 129, 0.1);
     }
 
     50% {
@@ -304,8 +318,8 @@ body {
 
     100% {
         box-shadow:
-            0 0 0 10px rgba(0, 0, 129, 0.1),
-            0 0 0 30px rgb(0, 0, 129, 0.1);
+            0 0 0 30px rgba(0, 0, 129, 0.2),
+            0 0 0 60px rgb(0, 0, 129, 0.1);
     }
 }
 
@@ -322,7 +336,7 @@ body {
     font-size: 5.5rem;
     font-weight: 800;
     text-align: center;
-    padding: 6rem 0 0 0;
+    padding: 5rem 0 0 0;
     letter-spacing: -0.1rem;
     color: #00283D;
 }
@@ -335,80 +349,71 @@ body {
 
 .art_two_content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    margin-top: 6.5rem;
+    margin-top: 6rem;
     color: #00283D;
 }
 
 .art_two_top {
-    width: 40%;
+    width: 15%;
     text-align: right;
+    margin-right: 2rem;
 }
 
-.art_two_top .left1 {
-    display: block;
-    font-size: 1rem;
+.art_two_top ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
-
-.art_two_top .left1 ul {
-    margin: 2rem 0 0 8rem;
-}
-
-.art_two_top .left1 ul li {
-    margin-bottom: 0.6rem;
-}
-
-.art_two_top .left2 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 2rem 0 0 8rem;
-}
-
-.art_two_top .left2 h5 {
-    font-size: 1.8rem;
-    font-weight: 900;
-    letter-spacing: -0.1rem;
-}
-
-.art_two_top .left2 p {
-    font-size: 0.8rem;
-    margin: 0.6rem 0;
-}
-
-.art_two_top .left2 .site {
-    width: 22%;
-    display: inline-block;
-    border: 1px solid #00283D;
-    background: #00283D;
-    color: #fff;
-    padding: 0.8rem;
-    margin: 1rem 0;
-    border-radius: 50%;
-}
-
-.art_two_top .left2 .site:hover {
-    animation: random-bg .5s linear infinite;
-}
-
-@keyframes random-bg {
-    from {
-        filter: hue-rotate(0);
-    }
-
-    to {
-        filter: hue-rotate(360deg);
-    }
-}
-
-
 
 .art_two_bottom {
-    width: 55%;
+    width: 70%;
+    text-align: left;
+    overflow: hidden;
 }
 
 .art_two_bottom img {
     width: 80%;
-    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.art_two_bottom img:hover {
+    animation: animate 2s ease-in-out infinite;
+    animation-iteration-count: 2;
+    transition: all 0.3s initial;
+}
+
+.art_two_bottom .site {
+    position: absolute;
+    bottom: 5.5rem;
+    right: 13.3rem;
+    width: 8%;
+    border: 1px solid #FFD639;
+    background: #00283D;
+    color: #FFD639;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border-radius: 50%;
+    font-weight: 500;
+    text-align: center;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.art_two_bottom img:hover::after {
+    content: '';
+    position: absolute;
+    z-index: 102;
 }
 
 /* 프로젝트 02 */

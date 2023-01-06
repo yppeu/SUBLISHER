@@ -3,21 +3,25 @@
 // 이게 없으면 바디안에 내용을 안 읽고 js먼저 실행된다. (순차적으로.)
 // document.ready를 안 쓰려면 js를 바디 맨 밑에 넣어두면 된다. (순차적으로.)
 $(function () {
-  $(".navbar_block").click(function () {
+  // 열기 아이콘
+  $(".navbar_icon").click(function () {
     console.log(1);
     $(".navbar_menu").toggleClass("active");
-    $(".navbar_none").toggleClass("active");
-    $(".navbar_block").toggleClass("active");
+    $(".navbar_icon").toggleClass("active");
   });
-  $(".navbar_none").click(function () {
-    console.log(1);
-    $(".navbar_menu").toggleClass("active");
-    $(".navbar_none").toggleClass("active");
-    $(".navbar_block").toggleClass("active");
-  });
+  // 닫기 아이콘
+  // $(".navbar_none").click(function () {
+  //   console.log(1);
+  //   $(".navbar_menu").toggleClass("active");
+  //   $(".navbar_none").toggleClass("active");
+  //   $(".navbar_block").toggleClass("active");
+  // });
 
+  // 메뉴 리스트
   $(".navbar_menu").click(function () {
-    alert(1);
+    console.log(1);
+    $(".navbar_block").show();
+    $(".navbar_block").toggleClass("active");
     $(".navbar_menu").hide();
     $(".navbar_none").hide();
     // $(".navbar_menu").show();
