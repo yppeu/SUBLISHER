@@ -1,4 +1,4 @@
-@media(min-width:320px) and (max-width:767px) {
+@media(min-width:320px) and (max-width:768px) {
     @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gilda+Display&display=swap');
 
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -8,7 +8,7 @@
     }
 
     body {
-        font-size: 10px;
+        font-size: 50%;
     }
 
     /* 공통 섹션 */
@@ -23,26 +23,27 @@
         justify-content: space-between;
         padding: 2rem 5rem;
         font-family: 'Abril Fatface', cursive;
+        cursor: pointer;
     }
 
     /* 로고 */
     .logo h1 {
         border: 1px solid #00283D;
         color: #00283D;
-        margin-top: 1rem;
-        padding: 1rem;
+        margin-top: 2.6rem;
+        padding: 1.8rem;
         border-radius: 50%;
-        font-size: 1rem;
+        font-size: 1.6rem;
         letter-spacing: 0.2rem;
     }
 
     /* 메뉴 아이콘 */
     .navbar_icon {
-        color: #00283D;
-        font-size: 4rem;
+        color: #ff3d43;
+        font-size: 7rem;
     }
 
-    .navbar_icon li:nth-child(2) {
+    .navbar_none {
         display: none;
     }
 
@@ -51,10 +52,50 @@
         display: none;
     }
 
-    .navbar_menu li {
+    .navbar_menu.active {
+        display: block;
+        position: fixed;
+        font-size: 7rem;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        text-align: right;
+        background: #fff;
+        color: #00283D;
+        padding: 8rem 10rem;
+        transition: 1s ease;
+        z-index: 99;
+    }
+
+    .navbar_menu li:hover {
+        color: #ff3d43;
+        transition: 1s ease;
+    }
+
+    .navbar_none.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding: 3rem;
+    }
+
+    /* 토글 메뉴 */
+    .navbar_block {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 3rem;
+        z-index: 101;
+    }
+
+    .navbar_block.active {
         display: none;
     }
 
+    /* 메인 시작 */
     .main_wrap {
         overflow: hidden;
     }
@@ -64,7 +105,7 @@
         font-family: 'Montserrat', sans-serif;
         display: flex;
         position: relative;
-        z-index: 99;
+        z-index: 98;
         width: 100%;
     }
 
@@ -160,18 +201,32 @@
         width: 100%;
         height: 100px;
         top: -4rem;
-        /* animation: wave 5.5s linear 0s infinite; */
+        animation: wave 2s linear 0s infinite;
         transform: translate3d(0, 0, 0);
     }
 
     /* 파도 애니메이션 */
     @keyframes wave {
-        0% {
+
+        0%,
+        100% {
             margin-left: 0;
         }
 
+        50% {
+            margin-left: -15px;
+        }
+    }
+
+    @keyframes wave2 {
+
+        0%,
         100% {
-            margin-left: -1600px;
+            margin-left: 0;
+        }
+
+        50% {
+            margin-left: 1600px;
         }
     }
 
@@ -209,12 +264,12 @@
     }
 
     .art_one_img img {
-        width: 15%;
+        width: 17%;
         filter: grayscale(0);
         transform: rotate(-9deg);
         transition: .9s;
-        /* border-radius: 0 20% 0 20%; */
-        border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+        border-radius: 50%;
+        /* border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%; */
         /* animation: motion 0.9s linear 0s infinite alternate; */
         animation: blur 3s ease-in-out infinite;
         /* animation-iteration-count: 1; */
@@ -224,16 +279,14 @@
 
     /* 둥둥 효과(세로) */
     @keyframes motion {
-        0% {
+
+        0%,
+        100% {
             margin-top: 0px;
         }
 
         50% {
             margin-top: 14px;
-        }
-
-        100% {
-            margin-top: 0px;
         }
     }
 
@@ -254,8 +307,8 @@
     @keyframes blur {
         0% {
             box-shadow:
-                0 0 0 10px rgba(0, 0, 129, 0.1),
-                0 0 0 30px rgb(0, 0, 129, 0.1);
+                0 0 0 30px rgba(0, 0, 129, 0.2),
+                0 0 0 60px rgb(0, 0, 129, 0.1);
         }
 
         50% {
@@ -266,8 +319,8 @@
 
         100% {
             box-shadow:
-                0 0 0 10px rgba(0, 0, 129, 0.1),
-                0 0 0 30px rgb(0, 0, 129, 0.1);
+                0 0 0 30px rgba(0, 0, 129, 0.2),
+                0 0 0 60px rgb(0, 0, 129, 0.1);
         }
     }
 
@@ -284,7 +337,7 @@
         font-size: 5.5rem;
         font-weight: 800;
         text-align: center;
-        padding: 6rem 0 0 0;
+        padding: 5rem 0 0 0;
         letter-spacing: -0.1rem;
         color: #00283D;
     }
@@ -297,80 +350,104 @@
 
     .art_two_content {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        margin-top: 6.5rem;
+        margin-top: 6rem;
         color: #00283D;
     }
 
     .art_two_top {
-        width: 40%;
+        flex-grow: 1;
+        width: 100%;
         text-align: right;
+        margin-right: 2rem;
     }
 
-    .art_two_top .left1 {
-        display: block;
-        font-size: 1rem;
+    .art_two_top ul li {
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
     }
-
-    .art_two_top .left1 ul {
-        margin: 2rem 0 0 8rem;
-    }
-
-    .art_two_top .left1 ul li {
-        margin-bottom: 0.6rem;
-    }
-
-    .art_two_top .left2 {
-        font-family: 'Montserrat', sans-serif;
-        margin: 2rem 0 0 8rem;
-    }
-
-    .art_two_top .left2 h5 {
-        font-size: 1.8rem;
-        font-weight: 900;
-        letter-spacing: -0.1rem;
-    }
-
-    .art_two_top .left2 p {
-        font-size: 0.8rem;
-        margin: 0.6rem 0;
-    }
-
-    .art_two_top .left2 .site {
-        width: 22%;
-        display: inline-block;
-        border: 1px solid #00283D;
-        background: #00283D;
-        color: #fff;
-        padding: 0.8rem;
-        margin: 1rem 0;
-        border-radius: 50%;
-    }
-
-    .art_two_top .left2 .site:hover {
-        animation: random-bg .5s linear infinite;
-    }
-
-    @keyframes random-bg {
-        from {
-            filter: hue-rotate(0);
-        }
-
-        to {
-            filter: hue-rotate(360deg);
-        }
-    }
-
-
 
     .art_two_bottom {
-        width: 55%;
+        flex-grow: 2;
+        width: 100%;
+        text-align: left;
+        overflow: hidden;
+        position: relative;
     }
 
     .art_two_bottom img {
+        width: 100%;
+    }
+
+    .art_two_top .site {
+        position: absolute;
+        top: 32.5rem;
+        left: 17.5rem;
+        width: 8.5%;
+        border: 1px solid #FFD639;
+        background: #00283D;
+        color: #FFD639;
+        padding: 0.8rem;
+        margin: 1rem 0;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .art_two_top .site:hover {
+        border: 2px solid #00283D;
+        background: #FFD639;
+        color: #00283D;
+        transition: 0.5s;
+    }
+
+    .art_two_bottom .modal_img:hover::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 80%;
-        border-radius: 1rem;
+        height: 100%;
+        /* background: #00283D; */
+        animation: text-focus-in 0.3s ease-in;
+        animation-iteration-count: 1;
+        /* background: rgba(0, 0, 0, 0.4); */
+        background-image: url(../img/play.png);
+        background-repeat: no-repeat;
+        background-size: 5rem;
+        background-position: 50%;
+        /* visibility: visible; */
+    }
+
+    .detail_wrap {
+        visibility: hidden;
+    }
+
+    @keyframes puls {
+
+        0%,
+        100% {
+            transform: scale(1.0);
+        }
+
+        50% {
+            transform: scale(1.03);
+        }
+    }
+
+    @keyframes text-focus-in {
+        0% {
+            filter: blur(10px);
+            opacity: 0;
+        }
+
+        100% {
+            filter: blur(0px);
+            opacity: 1;
+        }
     }
 
     /* 프로젝트 02 */
@@ -584,7 +661,7 @@
 
     /* 푸터 */
     .footer {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Abril Fatface', cursive;
         position: relative;
         width: 100%;
         background: #00283D;
@@ -601,7 +678,7 @@
         font-size: 5rem;
         line-height: 6rem;
         font-weight: 900;
-        letter-spacing: -0.2rem;
+        letter-spacing: 0.1rem;
         color: #FFD639;
     }
 
@@ -610,9 +687,10 @@
         color: #fff;
         line-height: 1.5rem;
         margin-top: 2rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: -0.1rem;
         font-weight: 100;
         opacity: 50%;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .footer_bm {
@@ -664,7 +742,7 @@
         position: absolute;
         overflow: hidden;
         /* top: 25rem;
-    left: 73rem; */
+        left: 73rem; */
         bottom: 2rem;
         right: 2rem;
     }

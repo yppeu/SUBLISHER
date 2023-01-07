@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Zilla+Slab:wght@300;400;500;600;700&display=swap');
 
+html {
+    font-size: 62.5%;
+}
+
 
 body {
     width: 100%;
     word-break: keep-all;
     overflow-x: hidden;
     font-family: 'Noto Sans KR', sans-serif;
+    /* font-size: 16px; */
+    font-size: 1.6rem;
 }
 
 html,
@@ -79,4 +85,8 @@ iframe {
 address,
 em {
     font-style: normal;
+}
+
+img {
+    cursor: pointer;
 }
