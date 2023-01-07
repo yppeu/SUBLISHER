@@ -36,7 +36,7 @@
 
 /* 메뉴 아이콘 */
 .navbar_icon {
-    color: #d72e2e;
+    color: #00283D;
     font-size: 7rem;
 }
 
@@ -63,6 +63,7 @@
     padding: 8rem 10rem;
     transition: 1s ease;
     z-index: 99;
+    /* color: #FFD639; */
 }
 
 .navbar_menu li:hover {
@@ -147,13 +148,14 @@
 .scroll {
     position: fixed;
     bottom: 2rem;
-    left: 2rem;
+    left: 4rem;
     font-weight: bold;
     z-index: 999;
     color: #00283D;
     padding: 1rem;
     background: #fff;
-    border: 5px solid #00283D;
+    border: 1px solid #00283D;
+    border-radius: 50%;
 }
 
 .scroll::after {
@@ -165,6 +167,7 @@
     height: 100%;
     background: #00283D;
     opacity: 10%;
+    border-radius: 50%;
 }
 
 /* 텍스트 왼쪽에서 오른쪽으로 */
