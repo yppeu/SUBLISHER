@@ -36,7 +36,7 @@
 
 /* 메뉴 아이콘 */
 .navbar_icon {
-    color: #ff3d43;
+    color: #d72e2e;
     font-size: 7rem;
 }
 
@@ -130,8 +130,8 @@
 /* sublisher */
 .main_vis .article_text h1:nth-child(2) {
     position: absolute;
-    top: 26rem;
-    left: 0;
+    top: 35rem;
+    right: 4rem;
     line-height: 8rem;
     color: #00283D;
     letter-spacing: -0.6rem;
@@ -139,8 +139,32 @@
     animation-iteration-count: 1;
 }
 
-.main_vis .article_text h1:nth-child(2) svg {
+.main_vis .article_text h1:nth-child(2) span {
     animation: move 2s ease-in-out infinite;
+}
+
+/* 스크롤 버튼 */
+.scroll {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    font-weight: bold;
+    z-index: 999;
+    color: #00283D;
+    padding: 1rem;
+    background: #fff;
+    border: 5px solid #00283D;
+}
+
+.scroll::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00283D;
+    opacity: 10%;
 }
 
 /* 텍스트 왼쪽에서 오른쪽으로 */
@@ -222,20 +246,22 @@
     top: 7rem;
     text-align: center;
     animation: motion 3s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
 }
 
-.art_one_content h2 {
+.art_one_content .art_one_txt h2 {
     -webkit-text-stroke: 1px #fff;
     font-size: 15.5rem;
     color: #00283D;
     font-weight: 900;
 }
 
-.art_one_content span {
+.art_one_content .art_one_txt span {
     color: #fff;
 }
 
-.art_one_content p {
+.art_one_content .art_one_txt p {
     font-size: 1.7rem;
     color: #fff;
     font-weight: 100;
@@ -244,12 +270,16 @@
 }
 
 .art_one_img {
-    width: 100%;
-    margin-top: 8rem;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 6rem;
 }
 
 .art_one_img img {
-    width: 20%;
+    width: 100%;
     filter: grayscale(0);
     transform: rotate(-9deg);
     transition: .9s;
@@ -257,6 +287,10 @@
     animation: blur 3s ease-in-out infinite;
     z-index: 5;
     margin-right: 2rem;
+}
+
+.art_one_img img:hover {
+    animation: blur2 3s ease-in-out infinite;
 }
 
 /* 둥둥 효과(세로) */
@@ -303,6 +337,26 @@
         box-shadow:
             0 0 0 30px rgba(0, 0, 129, 0.2),
             0 0 0 60px rgb(0, 0, 129, 0.1);
+    }
+}
+
+@keyframes blur2 {
+    0% {
+        box-shadow:
+            0 0 0 30px rgba(255, 51, 0, 0.1),
+            0 0 0 60px rgb(255, 51, 0, 0.1);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 30px rgba(255, 51, 0, 0.1),
+            0 0 0 60px rgb(255, 51, 0, 0.1);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 30px rgba(255, 51, 0, 0.1),
+            0 0 0 60px rgb(255, 51, 0, 0.1);
     }
 }
 
