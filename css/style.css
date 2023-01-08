@@ -71,14 +71,14 @@
     transition: 1s ease;
 }
 
-.navbar_none.active {
+/* .navbar_none.active {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     padding: 3rem;
-}
+} */
 
 /* 토글 메뉴 */
 .navbar_block {
@@ -124,7 +124,7 @@
     color: #fff;
     letter-spacing: -0.5rem;
     -webkit-text-stroke: 1px #00283D;
-    animation: right 1.5s ease-in infinite;
+    animation: right 0.5s ease-in infinite;
     animation-iteration-count: 1;
 }
 
@@ -136,7 +136,7 @@
     line-height: 8rem;
     color: #00283D;
     letter-spacing: -0.6rem;
-    animation: left 1.5s ease-in infinite;
+    animation: left 0.5s ease-in infinite;
     animation-iteration-count: 1;
 }
 
