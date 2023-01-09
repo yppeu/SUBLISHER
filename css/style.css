@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 * {
     box-sizing: border-box;
 }
@@ -124,7 +125,7 @@
     color: #fff;
     letter-spacing: -0.5rem;
     -webkit-text-stroke: 1px #00283D;
-    animation: right 0.5s ease-in infinite;
+    animation: right 1s ease-in infinite;
     animation-iteration-count: 1;
 }
 
@@ -136,7 +137,7 @@
     line-height: 8rem;
     color: #00283D;
     letter-spacing: -0.6rem;
-    animation: left 0.5s ease-in infinite;
+    animation: left 1s ease-in infinite;
     animation-iteration-count: 1;
 }
 
@@ -242,6 +243,18 @@
     }
 }
 
+@keyframes top {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* about content */
 .art_one_content {
     position: absolute;
@@ -251,6 +264,10 @@
     animation: motion 3s ease-in-out infinite;
     display: flex;
     flex-direction: column;
+}
+
+.art_one_content .art_one_txt {
+    animation: top 3s linear both;
 }
 
 .art_one_content .art_one_txt h2 {
@@ -273,7 +290,7 @@
 }
 
 .art_one_img {
-    width: 20%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -283,17 +300,16 @@
 
 .art_one_img img {
     width: 100%;
-    filter: grayscale(0);
-    transform: rotate(-9deg);
     transition: .9s;
     border-radius: 50%;
     animation: blur 3s ease-in-out infinite;
     z-index: 5;
     margin-right: 2rem;
+    overflow: hidden;
 }
 
 .art_one_img img:hover {
-    animation: blur2 3s ease-in-out infinite;
+    animation: more 1s ease-in-out infinite;
 }
 
 /* 둥둥 효과(세로) */
@@ -343,23 +359,21 @@
     }
 }
 
-@keyframes blur2 {
-    0% {
+@keyframes more {
+
+    0%,
+    100% {
+        transform: scale(1.0);
         box-shadow:
-            0 0 0 30px rgba(255, 51, 0, 0.1),
-            0 0 0 60px rgb(255, 51, 0, 0.1);
+            0 0 0 30px rgba(0, 0, 129, 0.2),
+            0 0 0 60px rgb(0, 0, 129, 0.1);
     }
 
     50% {
+        transform: scale(1.03);
         box-shadow:
-            0 0 0 30px rgba(255, 51, 0, 0.1),
-            0 0 0 60px rgb(255, 51, 0, 0.1);
-    }
-
-    100% {
-        box-shadow:
-            0 0 0 30px rgba(255, 51, 0, 0.1),
-            0 0 0 60px rgb(255, 51, 0, 0.1);
+            0 0 0 30px rgba(0, 0, 129, 0.2),
+            0 0 0 60px rgb(0, 0, 129, 0.1);
     }
 }
 
@@ -411,7 +425,7 @@
 
 .art_two_top ul li {
     margin-bottom: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .art_two_bottom {
@@ -430,8 +444,9 @@
 }
 
 .art_two_bottom .modal_img {
-    border-top: 5px solid #00283D;
-    border-right: 5px solid #00283D;
+    border-top: 7px solid #00283D;
+    border-right: 7px solid #00283D;
+    border-bottom: 4px solid #00283D;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
@@ -454,18 +469,6 @@
     background-size: 6rem;
     background-position: 50%;
     cursor: pointer;
-}
-
-@keyframes more {
-
-    0%,
-    100% {
-        transform: scale(1.0);
-    }
-
-    50% {
-        transform: scale(1.03);
-    }
 }
 
 @keyframes text-focus-in {
@@ -525,8 +528,9 @@
 }
 
 .art_three_top .modal_img {
-    border-top: 5px solid #FFD639;
-    border-left: 5px solid #FFD639;
+    border-top: 7px solid #FFD639;
+    border-left: 7px solid #FFD639;
+    border-bottom: 4px solid #FFD639;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
@@ -538,11 +542,12 @@
 .art_three_bottom {
     flex: 2;
     width: 100%;
+    padding-right: 2rem;
 }
 
 .art_three_bottom ul li {
     margin-bottom: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .art_three_bottom img {
@@ -596,6 +601,7 @@
     display: flex;
     flex-direction: row;
     display: inline-block;
+    margin-top: 1rem;
 }
 
 .section_list article img {
@@ -607,7 +613,7 @@
     color: #00283D;
     padding: 1rem;
     width: 100%;
-    margin: 1rem auto;
+    margin: 0.1rem auto;
     border-radius: 2rem;
     font-size: 1.6rem;
     font-weight: 600;
