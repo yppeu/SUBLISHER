@@ -18,12 +18,23 @@
     <!-- 제이쿼리 CDN -->
     <script src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="js/jquery.smooth-scroll.js"></script>
+
+    <!-- <script src="js/jquery.smooth-scroll.js"></script> -->
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <script src="./js/slick.js"></script>
 
     <!-- 외부 js -->
     <script src="./js/nav.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/slider.js"></script>
+
+
+    <!-- 슬라이더 -->
+    <!-- slick.JS -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
     <!-- AOS 라이브러리 불러오기-->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
@@ -135,28 +146,41 @@
             <!-- 프로젝트3 페이지 -->
             <section class="section art_four" id="STUDY">
                 <h3>STUDY + WORK</h3>
-                <div class="section_list">
+                <div class="section_list myslider">
                     <article>
-                        <img src="./img/wix2.png" alt="윅스 로고">
-                        <span>wix</span>
-                        <span>( 과거 업무 디자인 저장소 )</span>
+                        <img src="./img/wix.svg" alt="윅스 로고">
+                        <span>wix</span><br>
+                        <span>디자인 업무 저장소</span>
                         <button><a href="https://aquisua.wixsite.com/sunet" target="_blank">wix</a></button>
                     </article>
                     <article>
-                        <img src="./img/notion2.png" alt="노션 로고">
-                        <span>notion + tistory</span>
-                        <span>( 공부 및 개발 지식 공유 저장소 )</span>
-                        <div class="BT">
+                        <img src="./img/figma.svg" alt="피그마 로고">
+                        <span>figma</span><br>
+                        <span>기획 디자인 저장소</span>
+                        <button><a href="https://aquisua.wixsite.com/sunet" target="_blank">wix</a></button>
+                    </article>
+                    <article>
+                        <img src="./img/notion.svg" alt="노션 로고">
+                        <span>notion</span><br>
+                        <span>C# 문법 + 알고리즘</span>
+                        <div>
                             <button><a
                                     href="https://knowing-building-f15.notion.site/cadb298485934006a7f608fcafef489e">notion</a></button>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./img/tistory.svg" alt="노션 로고">
+                        <span>tistory</span><br>
+                        <span>Front 스터디 + 챌린지</span>
+                        <div>
                             <button><a href="https://blog-naver-com-yppeu.tistory.com/"
                                     target="_blank">tistory</a></button>
                         </div>
                     </article>
                     <article>
-                        <img src="./img/git2.png" alt="깃허브 로고">
-                        <span><a href="https://github.com/yppeu" target="_blank">git</a></span>
-                        <span>( 개발 소스 코드 저장소 )</span>
+                        <img src="./img/git.svg" alt="깃허브 로고">
+                        <span><a href="https://github.com/yppeu" target="_blank">git</a></span><br>
+                        <span>개발 소스 코드 저장소</span>
                         <button>git</button>
                     </article>
                 </div>

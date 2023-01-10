@@ -9,6 +9,23 @@
     box-sizing: border-box;
 }
 
+.art_one_img,
+.art_two h3,
+.art_three h3,
+.art_four h3,
+.footer_tp {
+    opacity: 0;
+}
+
+.art_one_img.fadein,
+.art_two h3.fadein,
+.art_three h3.fadein,
+.art_four h3.fadein,
+.footer_tp.fadein {
+    opacity: 1;
+    transition: all ease 1s 0s;
+}
+
 /* 공통 섹션 */
 .section {
     width: 100%;
@@ -581,31 +598,34 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
 
 .section_list article {
-    width: 18%;
+    width: 100%;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid #00283D;
     border-radius: 3rem;
-    margin-right: 6rem;
+    margin-right: 3rem;
     padding: 3rem 6rem;
     background: #00283D;
     color: #fff;
 }
 
-.section_list article:nth-child(2) .BT {
-    display: flex;
-    flex-direction: row;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
 .section_list article img {
     width: 100%;
+    padding: 3rem;
+}
+
+.section_list article:nth-child(4) img {
+    width: 50%;
+    background: #000;
 }
 
 .section_list article button {
@@ -677,7 +697,7 @@
 .footer_tp {
     position: absolute;
     top: 9rem;
-    right: 9rem;
+    right: 13rem;
     text-align: right;
     width: 30%;
     font-size: 8rem;
@@ -703,7 +723,7 @@
     flex-direction: column;
     position: absolute;
     top: 30rem;
-    left: 11rem;
+    left: 13rem;
     font-family: 'Montserrat', sans-serif;
 }
 

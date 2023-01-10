@@ -1,9 +1,9 @@
 $(function () {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
+  // window.scroll({
+  //   top: 0,
+  //   left: 0,
+  //   behavior: "smooth",
+  // });
   $(window).scroll(function () {
     console.log(window.scrollY);
     $("body").on("mousewheel", function (e) {
@@ -13,16 +13,26 @@ $(function () {
       console.log(Math.ceil(wheel));
       if (wheel >= 0 && wheel < 700) {
         $(".navbar_block").css("color", "#00283D");
-      } else if (wheel >= 700 && wheel <= 1460) {
+      } else if (wheel >= 700 && wheel <= 1260) {
         $(".navbar_block").css("color", "#FFD639");
-      } else if (wheel >= 1460 && wheel <= 2400) {
+        $(".art_one_img").addClass("fadein");
+        $("fadein").removeClass("fadein");
+      } else if (wheel >= 1260 && wheel <= 2100) {
         $(".navbar_block").css("color", "#00283D");
-      } else if (wheel > 2400 && wheel <= 3000) {
+        $(".art_two h3").addClass("fadein");
+        $("fadein").removeClass("fadein");
+      } else if (wheel > 2100 && wheel <= 2500) {
         $(".navbar_block").css("color", "#FFD639");
-      } else if (wheel >= 3000 && wheel <= 3933) {
+        $(".art_three h3").addClass("fadein");
+        $("fadein").removeClass("fadein");
+      } else if (wheel >= 2500 && wheel <= 3800) {
         $(".navbar_block").css("color", "#00283D");
+        $(".art_four h3").addClass("fadein");
+        $("fadein").removeClass("fadein");
       } else {
         $(".navbar_block").css("color", "#FFD639");
+        $(".footer_tp").addClass("fadein");
+        $("fadein").removeClass("fadein");
         $(".navbar_block").animate(
           {
             rotate: "180deg",
