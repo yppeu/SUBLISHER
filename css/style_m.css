@@ -329,7 +329,6 @@
         z-index: 5;
         margin-right: 2rem;
         overflow: hidden;
-        /* transform: rotate(-30deg) skew(30deg); */
         position: absolute;
         transition: 0.8s;
     }
