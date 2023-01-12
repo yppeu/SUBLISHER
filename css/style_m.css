@@ -47,7 +47,7 @@
         margin-top: 2.6rem;
         padding: 1.8rem;
         border-radius: 50%;
-        font-size: 1.6rem;
+        font-size: 2rem;
         letter-spacing: 0.2rem;
     }
 
@@ -117,14 +117,27 @@
 
     .main_vis .article_text h1 {
         font-weight: 900;
-        font-size: 6.5rem;
+        font-size: 7rem;
+        display: none;
+    }
+
+    .main_vis .article_text .hidden_logo {
+        position: absolute;
+        width: 100%;
+        top: 11rem;
+        left: 2.5rem;
+        font-size: 10rem;
+        display: block;
+        animation: left 1s ease-in infinite;
+        animation-iteration-count: 1;
+        color: #00283D;
     }
 
     /* yeonsua */
     .main_vis .article_text h1:nth-child(1) {
         position: absolute;
         width: 100%;
-        top: 15rem;
+        top: 30rem;
         left: 4rem;
         letter-spacing: -0.1rem;
         line-height: 8rem;

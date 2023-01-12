@@ -130,6 +130,10 @@
     font-size: 23rem;
 }
 
+.hidden_logo {
+    display: none;
+}
+
 /* yeonsua */
 .main_vis .article_text h1:nth-child(1) {
     position: absolute;
