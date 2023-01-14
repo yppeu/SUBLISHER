@@ -25,7 +25,7 @@ $(function () {
         $(".navbar_block").css("color", "#FFD639");
         $(".art_three h3").addClass("fadein");
         $("fadein").removeClass("fadein");
-      } else if (wheel >= 2500 && wheel <= 3600) {
+      } else if (wheel >= 2500 && wheel <= 3800) {
         $(".navbar_block").css("color", "#00283D");
         $(".art_four h3").addClass("fadein");
         $("fadein").removeClass("fadein");

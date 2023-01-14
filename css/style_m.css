@@ -8,23 +8,6 @@
         box-sizing: border-box;
     }
 
-    .art_one_img,
-    .art_two h3,
-    .art_three h3,
-    .art_four h3,
-    .footer_tp {
-        opacity: 0;
-    }
-
-    .art_one_img.fadein,
-    .art_two h3.fadein,
-    .art_three h3.fadein,
-    .art_four h3.fadein,
-    .footer_tp.fadein {
-        opacity: 1;
-        transition: all ease 1s 0s;
-    }
-
     /* 공통 섹션 */
     .section {
         width: 100%;
@@ -124,9 +107,21 @@
     .main_vis .article_text .hidden_logo {
         position: absolute;
         width: 100%;
-        top: 11rem;
+        top: 8rem;
         left: 2.5rem;
         font-size: 10rem;
+        display: block;
+        animation: left 1s ease-in infinite;
+        animation-iteration-count: 1;
+        color: #00283D;
+    }
+
+    .main_vis .article_text .hidden_logo2 {
+        position: absolute;
+        width: 100%;
+        top: 33rem;
+        left: 2.5rem;
+        font-size: 5.5rem;
         display: block;
         animation: left 1s ease-in infinite;
         animation-iteration-count: 1;
@@ -297,14 +292,15 @@
     }
 
     .art_one_img {
-        width: 80%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 0 auto;
         margin-top: 15rem;
-        position: relative;
-        top: -8.5rem;
+        position: absolute;
+        top: -16rem;
+        left: 25%;
     }
 
     .art_one_img img {
@@ -315,33 +311,24 @@
         z-index: 5;
         margin-right: 2rem;
         overflow: hidden;
-        position: absolute;
         transition: 0.8s;
     }
 
-    .art_one_img img:nth-child(2) {
-        margin-top: 20rem;
-        opacity: 0.9;
+    .art_one_content .art_one_txt p {
         display: none;
     }
 
-    .art_one_content .art_one_txt {
-        animation: top 2s linear both;
-        margin-top: 17rem;
+    .hidden_text {
+        display: block;
         position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-    }
-
-    .art_one_content .art_one_txt p {
-        font-size: 1.6rem;
-        color: #fff;
-        font-weight: 100;
-        line-height: 2.5rem;
-        letter-spacing: -0.1rem;
-        padding: 8rem;
         text-align: center;
+        top: 13rem;
+        right: 0;
+        font-size: 1.8rem;
+        color: #fff;
+        animation: left 3s ease-in-out infinite;
+        animation-iteration-count: 1;
     }
 
     /* 둥둥 효과(세로) */
@@ -407,14 +394,16 @@
         background-color: #FFD639;
         position: relative;
         width: 100%;
+        height: 100%;
         font-family: 'Montserrat', sans-serif;
+        padding: 1rem;
     }
 
     .art_two h3 {
         font-size: 7rem;
         font-weight: 800;
         text-align: center;
-        padding: 10rem 0 0 0;
+        padding: 6rem 0 3rem 0;
         letter-spacing: -0.1rem;
         color: #00283D;
     }
@@ -433,7 +422,6 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        margin-top: 5rem;
         color: #fff;
         background: #00283D;
         border-radius: 2rem;
@@ -509,14 +497,16 @@
         background-color: #00283D;
         position: relative;
         width: 100%;
+        height: 100%;
         font-family: 'Montserrat', sans-serif;
+        padding: 1rem;
     }
 
     .art_three h3 {
         font-size: 7rem;
         font-weight: 800;
         text-align: center;
-        padding: 10rem 0 0 0;
+        padding: 6rem 0 3rem 0;
         letter-spacing: -0.1rem;
         color: #FFD639;
     }
@@ -534,7 +524,6 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 5rem;
         color: #FFD639;
         background: #00283D;
         border-radius: 2rem;
@@ -608,8 +597,10 @@
         background: #FFD639;
         position: relative;
         width: 100%;
+        height: 100%;
         font-family: 'Montserrat', sans-serif;
         color: #00283D;
+        padding: 1rem 0 10rem 0;
     }
 
     .art_four h3 {
