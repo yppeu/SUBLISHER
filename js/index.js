@@ -1,7 +1,7 @@
 $(function () {
   //데일리로그
   $("#btn_pj").click(function () {
-    window.open("https://daily-log.co.kr/");
+    window.open("https://daily-log.net/");
     // $(location).attr("href", "https://daily-log.co.kr/");
   });
   //델리뮤직
